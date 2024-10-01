@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "e58e72bf-2c91-4286-a461-62eedbe14f97",
+		"name": "Amazon SP-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Aceess",
+			"item": [
+				{
+					"name": "Retrieve Token",
+					"id": "b6c1d626-5778-4380-80b7-2e4a99660b7f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "{refresh_token}",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{client_id}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{client_secret}",
+									"type": "text"
+								}
+							]
+						},
+						"url": "https://api.amazon.com/auth/o2/token"
+					},
+					"response": []
+				}
+			],
+			"id": "b5f6399b-b234-4f71-a13b-107ca027df6b"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "d334f55e-ce12-404d-b878-63211ce1c1b7",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6771145c-7006-48c6-97cf-ef1df7c62063",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://sandbox.sellingpartnerapi-na.amazon.com",
+			"type": "string"
+		},
+		{
+			"key": "refresh_token",
+			"value": "{refresh_token}",
+			"type": "string"
+		},
+		{
+			"key": "client_id",
+			"value": "{client_id}",
+			"type": "string"
+		},
+		{
+			"key": "client_secret",
+			"value": "{client_secret}",
+			"type": "string"
+		}
+	]
+}
